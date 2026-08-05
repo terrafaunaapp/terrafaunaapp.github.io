@@ -163,29 +163,27 @@ img {
   text-transform: uppercase;
 }
 
+.hero-copy .eyebrow {
+  letter-spacing: .1em;
+  text-transform: none;
+}
+
 .hero h1 {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(58px, 7.8vw, 118px);
+  font-size: clamp(54px, 6.4vw, 96px);
   font-weight: 560;
-  letter-spacing: -.068em;
-  line-height: .86;
+  letter-spacing: -.06em;
+  line-height: .9;
 }
 
-.hero h1 span {
-  display: inline-block;
-  position: relative;
+.hero h1 .hero-line {
+  display: block;
+  white-space: nowrap;
 }
 
-.hero h1 span::after {
-  content: "";
-  position: absolute;
-  right: -.16em;
-  bottom: .09em;
-  width: .1em;
-  height: .1em;
-  border-radius: 50%;
-  background: var(--lichen);
+.hero h1 .hero-line + .hero-line {
+  margin-top: .12em;
 }
 
 .hero-summary {
@@ -549,6 +547,10 @@ img {
     grid-template-columns: minmax(0, 1.1fr) minmax(240px, .9fr);
   }
 
+  .hero h1 {
+    font-size: clamp(46px, 6.2vw, 60px);
+  }
+
   .legal-layout {
     grid-template-columns: minmax(0, 760px);
   }
@@ -609,7 +611,7 @@ img {
   }
 
   .hero h1 {
-    font-size: clamp(52px, 17vw, 78px);
+    font-size: clamp(40px, 11.7vw, 68px);
   }
 
   .hero-summary {
@@ -692,7 +694,7 @@ img {
   }
 
   .hero h1 {
-    font-size: clamp(56px, 10vh, 82px);
+    font-size: clamp(48px, 8.5vh, 72px);
   }
 
   .eyebrow {
