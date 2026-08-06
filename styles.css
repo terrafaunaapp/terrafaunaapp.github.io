@@ -22,6 +22,7 @@ html {
   color: var(--ink);
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
   text-rendering: optimizeLegibility;
 }
 
@@ -72,14 +73,12 @@ img {
 /* Landing */
 
 .landing {
-  height: 100svh;
   min-height: 100svh;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .landing-shell {
   width: min(100%, var(--max-width));
-  height: 100svh;
   min-height: 100svh;
   margin: 0 auto;
   padding: max(18px, env(safe-area-inset-top)) max(var(--page-pad), env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(var(--page-pad), env(safe-area-inset-left));
@@ -552,7 +551,7 @@ img {
   }
 
   .legal-layout {
-    grid-template-columns: minmax(0, 760px);
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .legal-aside {
@@ -563,13 +562,16 @@ img {
 
   .legal-aside nav {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px 22px;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: max-content;
   }
 }
 
 @media (max-width: 640px) {
   .landing-shell {
+    height: auto;
+    min-height: 100svh;
     padding-left: max(20px, env(safe-area-inset-left));
     padding-right: max(20px, env(safe-area-inset-right));
   }
@@ -600,9 +602,14 @@ img {
 
   .hero {
     grid-template-columns: 1fr;
-    grid-template-rows: auto minmax(0, 1fr);
-    gap: 8px;
-    padding: clamp(22px, 4.6vh, 42px) 0 12px;
+    grid-template-rows: auto auto;
+    align-content: center;
+    gap: clamp(28px, 5vh, 48px);
+    padding: clamp(28px, 4.5vh, 44px) 0;
+  }
+
+  .hero-copy {
+    min-width: 0;
   }
 
   .eyebrow {
@@ -611,7 +618,8 @@ img {
   }
 
   .hero h1 {
-    font-size: clamp(40px, 11.7vw, 68px);
+    font-size: clamp(36px, 11vw, 48px);
+    line-height: .92;
   }
 
   .hero-summary {
@@ -622,6 +630,8 @@ img {
   }
 
   .hero-actions {
+    flex-wrap: wrap;
+    gap: 18px 26px;
     margin-top: 20px;
   }
 
@@ -637,8 +647,8 @@ img {
   }
 
   .mark-stage {
-    width: min(100%, 34vh);
-    max-height: 34vh;
+    width: min(78vw, 320px);
+    max-height: none;
     margin: 0 auto;
   }
 
@@ -648,8 +658,11 @@ img {
   }
 
   .landing-footer {
-    padding-top: 10px;
-    font-size: 9px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 12px;
+    font-size: 10px;
   }
 
   .landing-footer p:first-child {
@@ -663,7 +676,55 @@ img {
   }
 
   .legal-layout {
-    padding: 48px 20px 72px;
+    padding: 36px 20px 64px;
+  }
+
+  .legal-aside {
+    margin-right: -20px;
+    margin-left: -20px;
+    padding: 0 20px 22px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .legal-aside::-webkit-scrollbar {
+    display: none;
+  }
+
+  .legal-aside p {
+    margin-bottom: 10px;
+  }
+
+  .legal-aside a {
+    display: inline-flex;
+    min-height: 36px;
+    align-items: center;
+    padding: 8px 11px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .46);
+    white-space: nowrap;
+  }
+
+  .legal-document h1 {
+    font-size: clamp(40px, 12vw, 54px);
+    overflow-wrap: break-word;
+  }
+
+  .legal-intro {
+    margin-top: 22px;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .legal-section {
+    padding: 36px 0;
+  }
+
+  .legal-section h2 {
+    font-size: clamp(25px, 7.2vw, 30px);
   }
 
   .data-list > div {
@@ -675,6 +736,27 @@ img {
     padding-left: 20px;
     padding-right: 20px;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) and (max-height: 760px) {
+  .hero {
+    gap: 24px;
+    padding: 24px 0;
+  }
+
+  .mark-stage {
+    width: min(66vw, 250px);
+  }
+}
+
+@media (max-width: 350px) {
+  .hero h1 .hero-line {
+    white-space: normal;
+  }
+
+  .quiet-nav {
+    gap: 12px;
   }
 }
 
@@ -719,19 +801,13 @@ img {
   }
 }
 
-@media (max-width: 390px), (max-height: 610px) {
-  .text-link,
-  .hero-mark figcaption,
-  .landing-footer p:first-child {
+@media (max-width: 390px) {
+  .hero-mark figcaption {
     display: none;
   }
 
   .hero-actions {
-    margin-top: 14px;
-  }
-
-  .mark-stage {
-    width: min(100%, 29vh);
+    margin-top: 18px;
   }
 }
 
