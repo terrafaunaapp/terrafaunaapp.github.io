@@ -316,6 +316,55 @@ img {
   color: var(--ink-tertiary);
 }
 
+/* Support */
+
+.support-page {
+  min-height: 100svh;
+}
+
+.support-shell {
+  width: min(100%, var(--max-width));
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: max(18px, env(safe-area-inset-top)) max(var(--page-pad), env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(var(--page-pad), env(safe-area-inset-left));
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.support-main {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  padding: clamp(56px, 10vh, 120px) 0;
+}
+
+.support-main h1 {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(56px, 8vw, 104px);
+  font-weight: 560;
+  letter-spacing: -.06em;
+  line-height: .92;
+}
+
+.support-email {
+  display: inline-block;
+  margin-top: clamp(30px, 5vh, 52px);
+  color: var(--ink-secondary);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 560;
+  letter-spacing: -.02em;
+  text-decoration-color: var(--lichen);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 7px;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.support-email:hover {
+  color: var(--ink);
+  text-decoration-color: var(--ink);
+}
+
 /* Legal documents */
 
 .legal-page {
