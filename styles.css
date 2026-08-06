@@ -178,7 +178,7 @@ img {
 
 .hero h1 .hero-line {
   display: block;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .hero h1 .hero-line + .hero-line {
