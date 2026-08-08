@@ -365,6 +365,34 @@ img {
   text-decoration-color: var(--ink);
 }
 
+.support-note {
+  max-width: 620px;
+  margin-top: clamp(30px, 4vh, 44px);
+  color: var(--ink-secondary);
+  font-size: clamp(15px, 1.35vw, 18px);
+  line-height: 1.65;
+}
+
+.support-note p {
+  margin: 0;
+}
+
+.support-note p + p {
+  margin-top: 12px;
+}
+
+.support-note a {
+  color: var(--ink);
+  text-decoration-color: var(--lichen);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 180ms ease;
+}
+
+.support-note a:hover {
+  text-decoration-color: var(--ink);
+}
+
 /* Legal documents */
 
 .legal-page {
