@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f5f1">
+  <meta name="description" content="Open roles at Terra Fauna — animator, species illustrator, software engineer, marketing lead, and business development lead. Remote, Bay Area preferred, Pacific hours.">
+  <meta property="og:title" content="Careers — Terra Fauna">
+  <meta property="og:description" content="Help build a wildlife discovery game for the real world. Five open roles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://terrafauna.app/careers/">
+  <meta property="og:image" content="https://terrafauna.app/assets/flowing-stag.png">
+  <title>Careers — Terra Fauna</title>
+  <link rel="icon" type="image/png" href="../assets/flowing-stag.png">
+  <link rel="apple-touch-icon" href="../assets/flowing-stag.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="careers-page">
+  <a class="skip-link" href="#roles">Skip to open roles</a>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="../" aria-label="Terra Fauna home">
+        <img src="../assets/flowing-stag.png" alt="" width="44" height="44">
+        <span>Terra Fauna</span>
+      </a>
+      <nav class="quiet-nav" aria-label="Site navigation">
+        <a href="../support/">Support</a>
+        <a class="nav-cta" href="https://apps.apple.com/us/app/terra-fauna-explore-the-wild/id6798435401">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="careers-hero">
+      <p class="section-kicker">Careers</p>
+      <h1>Five people. One field guide to the living world.</h1>
+      <p class="careers-lede">Terra Fauna is a wildlife discovery game for iPhone, now on the App Store. You go outside, record a real animal on video, and the species is identified on your device. Sixty species at launch, on the way to a hundred and sixty. We are small, we ship, and every role below owns its craft outright.</p>
+
+      <dl class="fact-row">
+        <div>
+          <dt>Location</dt>
+          <dd>Remote, SF Bay Area preferred</dd>
+        </div>
+        <div>
+          <dt>Hours</dt>
+          <dd>Overlap with normal Pacific working hours</dd>
+        </div>
+        <div>
+          <dt>Type</dt>
+          <dd>Full-time</dd>
+        </div>
+        <div>
+          <dt>Compensation</dt>
+          <dd>Competitive, with meaningful equity</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section roles-section" id="roles" aria-labelledby="roles-title">
+      <div class="section-head">
+        <p class="section-kicker">Open roles</p>
+        <h2 id="roles-title">Five openings.</h2>
+      </div>
+
+      <div class="roles">
+
+        <details class="role">
+          <summary>
+            <span class="role-title">Animator</span>
+            <span class="role-meta">Motion · Full-time · Remote</span>
+            <span class="role-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="role-body">
+            <p>Terra Fauna is a quiet, highly structured interface wrapped around hand-drawn animals. Motion is where it becomes a game. You own the moments people will remember: the capture reveal, an animal waking up in the collection, a level threshold crossing, an attack landing.</p>
+            <h3>What you’ll do</h3>
+            <ul>
+              <li>Design and build the capture-to-reveal sequence, the highest-stakes twelve seconds in the product.</li>
+              <li>Animate the species catalog — idles, reactions, and battle moves that read at thumbnail size on a phone.</li>
+              <li>Define the interface motion language: transitions, progress, and state changes that feel precise rather than decorative.</li>
+              <li>Ship animations into a SwiftUI app and keep them cheap enough to run on a phone that is also encoding video.</li>
+            </ul>
+            <h3>What we’re looking for</h3>
+            <ul>
+              <li>A reel with 2D character animation in it. We care far more about weight and timing than about polish count.</li>
+              <li>Fluency in a pipeline that reaches production — Rive, Lottie/After Effects, or direct SwiftUI animation.</li>
+              <li>Restraint. Terra Fauna has no glows, no particle storms, and no metallic UI.</li>
+              <li>Nice to have: animals studied from life, or any experience animating naturalistic anatomy.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="role">
+          <summary>
+            <span class="role-title">Artist, Species Illustration</span>
+            <span class="role-meta">Illustration · Full-time · Remote</span>
+            <span class="role-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="role-body">
+            <p>Every species in Terra Fauna has one canonical portrait, drawn in a refined colored-pencil style, plus a silhouette for the animals a player has not found yet. That artwork carries the entire emotional weight of the product. You would own it.</p>
+            <h3>What you’ll do</h3>
+            <ul>
+              <li>Draw the species portraits that take the catalog from sixty animals to a hundred and sixty, and beyond.</li>
+              <li>Hold the line on anatomy, posture, and plumage or pelage accuracy — a birder should recognize the bird.</li>
+              <li>Keep one coherent art direction across hundreds of animals drawn over years.</li>
+              <li>Extend the visual system into items, team motifs, and App Store and campaign art.</li>
+            </ul>
+            <h3>What we’re looking for</h3>
+            <ul>
+              <li>A portfolio with real animals in it, rendered with observed detail rather than stylized shorthand.</li>
+              <li>Comfort working to a written style guide and a repeatable production spec.</li>
+              <li>Volume without decay — the ability to draw the ninetieth animal as well as the ninth.</li>
+              <li>Nice to have: field guide, natural history, or scientific illustration background.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="role">
+          <summary>
+            <span class="role-title">Software Engineer</span>
+            <span class="role-meta">iOS &amp; Backend · Full-time · Remote</span>
+            <span class="role-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="role-body">
+            <p>The app is native SwiftUI on Swift 6, with AVFoundation capture, a Core ML classifier run through Vision, and Supabase Postgres with PostGIS behind a small trust boundary of Edge Functions. Captures have to work in a canyon with no signal and still be trustworthy when they sync.</p>
+            <h3>What you’ll do</h3>
+            <ul>
+              <li>Build features end to end: SwiftUI screens, the Swift client, the SQL, and the Edge Function in between.</li>
+              <li>Work on the capture path — video, precise location, on-device inference, and integrity signals — where correctness actually matters.</li>
+              <li>Make offline capture and later reconciliation hold up against both bad connectivity and bad actors.</li>
+              <li>Take on the v2 surface: friends, live feeds, map, hubs, and battles.</li>
+            </ul>
+            <h3>What we’re looking for</h3>
+            <ul>
+              <li>Shipped iOS work in Swift, and enough backend range to own a Postgres schema without hand-holding.</li>
+              <li>Judgment about trust boundaries: what a client may be believed about, and what must be checked on a server.</li>
+              <li>Comfort with structured concurrency and with tests at each boundary.</li>
+              <li>Nice to have: Core ML or Vision in production, PostGIS, or App Attest.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="role">
+          <summary>
+            <span class="role-title">Marketing Lead</span>
+            <span class="role-meta">Growth · Full-time · Remote</span>
+            <span class="role-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="role-body">
+            <p>We just launched. There is an App Store listing, a small pile of gorgeous artwork, and no growth engine yet. You would be the first marketing hire and would build that engine from the listing outward.</p>
+            <h3>What you’ll do</h3>
+            <ul>
+              <li>Own the App Store presence: positioning, screenshots, preview video, keywords, and the experiments that move installs.</li>
+              <li>Build the organic channel. Our artwork and real captures are unusually good social material and are barely being used.</li>
+              <li>Reach the people already outside — birders, hikers, naturalists, parks and trail communities, science educators, and the creators they follow.</li>
+              <li>Set up the measurement that tells us which of the above is actually working, and kill what is not.</li>
+            </ul>
+            <h3>What we’re looking for</h3>
+            <ul>
+              <li>You have grown a consumer app or a consumer brand from a small base, and can show what you did.</li>
+              <li>Strong instincts for craft and taste — bad marketing would visibly damage this product.</li>
+              <li>Hands-on. For a while you are the strategist, the writer, and the editor.</li>
+              <li>Nice to have: ASO depth, or a real connection to the outdoor or conservation world.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="role">
+          <summary>
+            <span class="role-title">Business Development Lead</span>
+            <span class="role-meta">Partnerships · Full-time · Remote</span>
+            <span class="role-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="role-body">
+            <p>Terra Fauna gets better everywhere people already gather to look at animals. Parks, reserves, aquariums, museums, tourism boards, and conservation groups all have audiences, locations, and species expertise. You would turn that into partnerships that are real rather than logo-swaps.</p>
+            <h3>What you’ll do</h3>
+            <ul>
+              <li>Open and close partnerships with parks systems, conservation organizations, museums, and regional tourism bodies.</li>
+              <li>Design what a partnership actually is — regional catalogs, sponsored species, on-site events, education programs — with the product team.</li>
+              <li>Handle the licensing and data relationships behind species content and regional expansion.</li>
+              <li>Bring back what partners need, so it can shape the roadmap instead of arriving after it.</li>
+            </ul>
+            <h3>What we’re looking for</h3>
+            <ul>
+              <li>You have sourced and closed partnerships yourself, at an early company, without a brand doing the work for you.</li>
+              <li>Credibility with mission-driven institutions — this world moves slowly and notices who is sincere.</li>
+              <li>Clear written thinking and the discipline to walk away from deals that cost more attention than they return.</li>
+              <li>Nice to have: conservation, outdoor recreation, or location-based entertainment experience.</li>
+            </ul>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <section class="section apply-section" aria-labelledby="apply-title">
+      <div class="apply-inner">
+        <p class="section-kicker">How to apply</p>
+        <h2 id="apply-title">Send us the work.</h2>
+        <p class="apply-note">Email <a href="mailto:careers@terrafauna.app">careers@terrafauna.app</a> with the role in the subject line, a portfolio or a link to something you made, and a short note about why this one. No cover letter template. We read everything and reply either way.</p>
+        <a class="apply-email" href="mailto:careers@terrafauna.app">careers@terrafauna.app</a>
+        <p class="apply-eeo">Terra Fauna is an equal opportunity employer. We consider every qualified applicant without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, veteran status, or any other protected characteristic.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p class="footer-ethos"><span>Wildlife first.</span> Observe from a safe distance and leave every animal free to move.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="../">Home</a>
+        <a href="../support/">Support</a>
+        <a href="../privacy/">Privacy</a>
+        <a href="../terms/">Terms</a>
+      </nav>
+      <p class="copyright">© 2026 Terra Fauna</p>
+    </div>
+  </footer>
+</body>
+</html>
